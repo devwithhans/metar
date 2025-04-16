@@ -16,9 +16,16 @@ This service fetches and displays METAR weather data for aviation purposes. It p
    ```
 3. Install dependencies:
    ```
-   pip install fastapi uvicorn
+   pip install -r requirements.txt
    ```
-4. Run the application:
+4. Set up environment variables:
+   - Create a `.env` file in the project root
+   - Add your API key(s) to the file:
+     ```
+     METAR_API_KEY=your_api_key_here
+     # Add any other required configuration variables
+     ```
+5. Run the application:
    ```
    uvicorn main:app --reload
    ```
@@ -48,7 +55,21 @@ Simple health check endpoint to verify the service is running.
 
 ## Environment Variables
 
-The application uses a `.env` file for configuration (ignored by git).
+The application uses a `.env` file for configuration (ignored by git for security). Here's how to set it up:
+
+1. Create a `.env` file in the project root directory
+2. Add the required API keys and configuration values:
+
+```
+# API Keys
+METAR_API_KEY=your_api_key_here
+
+# Other Configuration
+# PROXY_URL=http://your-proxy-if-needed
+# DEBUG=True
+```
+
+3. The application will automatically load these variables using the python-dotenv package.
 
 ## Development
 

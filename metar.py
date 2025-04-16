@@ -13,7 +13,7 @@ import sys
 import time
 from datetime import datetime, timezone
 from dataclasses import asdict, dataclass
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Optional
 
 import requests
 from dotenv import load_dotenv
@@ -23,7 +23,7 @@ import os
 #                              CONFIGURATION                                  #
 # --------------------------------------------------------------------------- #
 load_dotenv()
-API_KEY = os.getenv("API_KEY")
+API_KEY = os.getenv("METAR_API_KEY")
 API_URL = "https://dmigw.govcloud.dk/v2/metObs/collections/observation/items"
 
 STATIONS = {  # DMI id ➜ ICAO
