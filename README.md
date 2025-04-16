@@ -16,7 +16,7 @@ This service fetches and displays METAR weather data for aviation purposes. It p
    ```
 3. Install dependencies:
    ```
-   pip install fastapi uvicorn streamfeed
+   pip install fastapi uvicorn
    ```
 4. Run the application:
    ```

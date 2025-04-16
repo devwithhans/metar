@@ -1,4 +1,3 @@
 fastapi
-streamfeed-parser
 uvicorn
 dotenv
